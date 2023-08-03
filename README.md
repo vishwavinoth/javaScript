@@ -1,6 +1,6 @@
 # JavaScript Loading Effect with Spinner
 
-![Loading Effect with Spinner](https://example.com/path/to/screenshot.png)
+![Loading Effect with Spinner](/Loading%20Effect%20with%20Spinner.png)
 
 This is a simple HTML, CSS, and JavaScript code that demonstrates a loading effect with a spinner animation. The loading effect is applied to a set of "javaScript" div elements that represent different JavaScript-related topics. When the page loads, each "javaScript" element is initially shown with a loading spinner, and after a delay, the content fades in.
 
