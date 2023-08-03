@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.javaScript>h1 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.javaScript>p {
+    font-size: medium;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.javaScript_box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: fit-content;
+    height: auto;
+}
+
+.javaScript {
+    width: 180px;
+    height: 100%;
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(240, 248, 255, 0.068);
+    margin: 10px;
+    padding: 25px;
+    box-shadow: 0px 0px 50px -3px rgba(0, 0, 0, 0.0);
+}
+
+.javaScript:hover {
+    color: black;
+    background-color: yellow;
+    box-shadow: 0px 0px 50px -3px #808080c1;
+}

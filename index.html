@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+    <link rel="shortcut icon" href="https://www.learn-js.org/static/img/favicons/learn-js.org.ico" type="image/x-icon">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="javaScript_box" id="javaScriptContainer"></div>
+
+    <!-- Js -->
+    <script src="index.js"></script>
+
+    <style>
+        /* CSS for the loading effect */
+        .javaScript-loading {
+            animation: fadeIn 1s ease-in-out;
+            opacity: 0;
+            /* Loading color */
+            background-image: linear-gradient(45deg, #171717 1%, #0c0c0c 100%);
+            background-size: 200% 100%;
+            animation: dualColorAnimation 2s ease-in-out infinite;
+        }
+
+        @keyframes dualColorAnimation {
+            0% {
+                background-position: 100% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .javaScript-loaded {
+            animation: fadeOut 0.5s ease-in-out;
+            opacity: 1;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script>
+        // Function to create the "javaScript" div element with loading effect
+        function createJavaScriptElement(textContent) {
+            // Create a new <div> element with class "javaScript"
+            const divElement = document.createElement("div");
+            divElement.classList.add("javaScript", "javaScript-loading");
+
+            // Create a new <h1> element with the specified text content
+            const h1Element = document.createElement("h1");
+            h1Element.textContent = textContent;
+
+            // Append the <h1> element as a child to the <div> element
+            divElement.appendChild(h1Element);
+
+            // Simulate the loading time with a delay of 1000ms (1 second)
+            setTimeout(() => {
+                // Replace the "javaScript-loading" class with "javaScript-loaded"
+                divElement.classList.remove("javaScript-loading");
+                divElement.classList.add("javaScript-loaded");
+            }, 1000);
+
+            // Return the created <div> element
+            return divElement;
+        }
+
+        // Get the container element with ID "javaScriptContainer"
+        const container = document.getElementById("javaScriptContainer");
+
+        // Array of texts for the "javaScript" elements
+        const texts = ["Js", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript", "Dynamic", "JavaScript"];
+
+        // Create and append "javaScript" div elements to the container
+        texts.forEach(text => {
+            const javaScriptElement = createJavaScriptElement(text);
+            container.appendChild(javaScriptElement);
+        });
+    </script>
+
+</body>
+
+</html>
