@@ -40,3 +40,48 @@ body {
     background-color: yellow;
     box-shadow: 0px 0px 50px -3px #808080c1;
 }
+
+/* CSS for the loading effect */
+.javaScript-loading {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+    /* Loading color */
+    background-image: linear-gradient(45deg, #171717 1%, #0c0c0c 100%);
+    background-size: 200% 100%;
+    animation: dualColorAnimation 2s ease-in-out infinite;
+}
+
+@keyframes dualColorAnimation {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.javaScript-loaded {
+    animation: fadeOut 0.5s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
